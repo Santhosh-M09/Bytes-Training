@@ -1,0 +1,17 @@
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if(head == null || head.next == null){
+            return false;
+        }
+        ListNode anil  = head;
+        ListNode aamai = head;
+        while(anil.next != null && anil.next.next !=null){
+            aamai = aamai.next;
+            anil = anil.next.next;
+            if(anil == aamai){
+                return true;
+            }
+        }
+        return false;
+    }
+}
